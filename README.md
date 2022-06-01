@@ -104,6 +104,7 @@ Follow the API documentation and simply run the fields.
 2. Login
 
 `http://localhost:8000/login`
+
 Ensure that you enter the email and password fields.
 Follow the API documentation and simply run the fields. It will check if you are in the database. Once you successfully Login, you will obtain the bearer token like in the image below.
 
