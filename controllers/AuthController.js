@@ -4,7 +4,6 @@ const User = require('../models/User');
 require('dotenv').config();
 
 const JWT_SECRET = process.env.SECRET_KEY;
-console.log(`JWT Secret: ${JWT_SECRET}`);
 const { emailRegex } = require('../helpers/AuthHelpers');
 
 // registration helper function for user
@@ -51,7 +50,6 @@ const verifyUserLogin = async (email, password) => {
       return { status: 'error', error: 'user not found' };
     }
     if (await bcrypt.compare(password, user.password)) {
-      console.log('compared successfully');
       // creating a JWT token
       const token = jwt.sign(
         // eslint-disable-next-line no-underscore-dangle
@@ -63,7 +61,6 @@ const verifyUserLogin = async (email, password) => {
     }
     return { status: 'error', error: 'invalid password' };
   } catch (error) {
-    console.log(error);
     return { status: 'error', error: 'timed out' };
   }
 };
