@@ -137,4 +137,7 @@ Click on Select Files and then upload your file.
 #### Testing
 
 very simply, just run the following command in the terminal in the project root directory again.
-` npm run test`
+
+```
+ npm run test
+```
